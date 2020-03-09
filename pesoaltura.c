@@ -7,11 +7,18 @@ typedef struct {
 } PesoAltura;
 
 int main() {
+    int x;
     PesoAltura pessoa1;
     pessoa1.peso = 90;
     pessoa1.altura = 185;
+    
     printf("Peso: %i, Altura: %i. ", pessoa1.peso, pessoa1.altura);
-    if (pessoa1.altura> alturaMaxima) printf("Altura acima da maxima.\n");
+    if (pessoa1.altura> alturaMaxima) {
+        printf("Altura acima da maxima.\n");
+    }
     else printf ("Altura abaixo da maxima.\n");
+    
+    printf("%i %i %i\n", &x, &pessoa1, &(pessoa1.altura));
+
     return 0;
 }
